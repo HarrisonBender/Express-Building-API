@@ -15,7 +15,7 @@ router.get('/:id?', (req,res) => {
 
 router.post('/', (req,res) => {
     chirpsStore.CreateChirp(req.body);
-    res,sendStatus(200);
+    res.sendStatus(200);
 });
 
 module.exports = router;
