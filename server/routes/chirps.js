@@ -18,4 +18,17 @@ router.post('/', (req,res) => {
     res.sendStatus(200);
 });
 
+
+router.put('/:id', (req, res) => {
+    const id = req.params.id;
+    const chirp = req.body;
+
+    res.send(chirpsStore.UpdateChirp(id, chirp));
+});
+
+router.delete('/:id', (req, res) => {
+    const id = req.params.id;
+    res.send(chirpsStore.DeleteChirp(id));
+});
+
 module.exports = router;
